@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+#nav{
+    overflow-x:hidden; 
+    overflow-y:hidden;
+}
+
+@media screen and (max-width:820px) {
+
+    #nav {
+        height: 50px;
+    }
+
+    #object {
+        height: 1000vh;
+    }   
+}
+
+
+@media screen and (max-width:400px) {
+
+    #nav {
+        height: 50px;
+    }
+
+    #object {
+        height: 2000vh;
+    }   
+}
+
+

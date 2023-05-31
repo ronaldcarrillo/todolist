@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    box-sizing: border-box;
+   
+}
+body{
+    background-color: #079ea6;
+    overflow-x:hidden; 
+    overflow-y:hidden;
+}
+
+.container-link{
+    text-decoration: none;
+}
+
+.task{
+    text-align: center;
+    background-color: #079ea6;
+    padding: 3pc;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 20px;
+}
+.task:hover{
+    background-color: #0e767c;
+    transform: scale(1.05);
+    animation: animacion 1s infinite alternate;/*Se le da un nombre 'animacion' para relacionarlo con el keyframe*/
+}
+
+.container{
+    padding: 3pc;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1pc; /*Espaciado en fila*/
+    column-gap: 1pc;/*Espaciado en columna*/
+}
+
+/*keyframe*/
+@keyframes animacion {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*Girar el sol*/
+.rotating-img{
+    width: 8pc;
+}
+
+.task:hover .rotating-img{
+    animation: rotar 20s ease;
+}
+/*keyframes*/
+@keyframes rotar {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width:820px){
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2pc;
+    }
+    .task{
+        padding: 2pc;
+    }
+
+    .lista a {
+        display: none;
+    }
+
+    /* header{
+
+    } */
+
+}
+
+@media screen and (max-width:400px) {
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 1pc;
+        gap: 2pc;
+        justify-items: center;
+    }
+    .task{
+        width: 80%;
+        padding: 1pc;
+    }
+    
+
+
+}
